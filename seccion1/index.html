@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ilustraciones</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1; /* Take remaining vertical space */
+            padding: 2rem;
+        }
+        .image-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+        .image-row img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+    </style>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('.menu').classList.toggle('active');
+        });
+    });
+    </script>
+</head>
+<body>
+    <header class="menu">
+        <div>
+            <img src="../img/logo.png" width="100" alt="Foto logo"> 
+        </div> 
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav class="menu-items">
+            <a href="../index.html">Inicio</a>
+            <a href="../portfolio/index.html">Mi Portfolio</a>
+            <a href="../contacto/index.html">Contacto</a>
+            <a href="../sobremi/index.html">Sobre Mí</a>
+            <a href="../servicios/index.html">Servicios</a>
+        </nav>
+    </header>
+    <section class="container">
+        <div class="image-row">
+            <img src="../img/ilustracion.jpeg" alt="Ilustración 1" width="400">
+            <img src="../img/ilustracion2.jpeg" alt="Ilustración 2" width="400">
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024</p>
+        <a href="mailto:mirandapm@gmail.com">Contáctame aquí</a>
+    </footer>
+</body>
+</html>

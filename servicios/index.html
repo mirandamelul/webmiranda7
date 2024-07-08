@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #cdc2f3;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .servicios-container {
+            padding: 2rem;
+            margin: 2rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-top: 1.5rem;
+        }
+
+        ul {
+            margin-bottom: 1.5rem;
+        }
+
+        li {
+            margin-left: 1.5rem;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
+        }
+        a:hover {
+            color: inherit;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 1rem;
+        }
+  
+
+    </style>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('.menu').classList.toggle('active');
+        });
+    });
+    </script>
+</head>
+<body>
+    <header class="menu">
+        <div>
+            <img src="../img/logo.png" width="100" alt="Foto logo">
+        </div> 
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav class="menu-items">
+            <a href="../index.html">Inicio</a>
+            <a href="../portfolio/index.html">Mi Portfolio</a>
+            <a href="../contacto/index.html">Contacto</a>
+            <a href="../sobremi/index.html">Sobre Mí</a>
+            <a href="../servicios/index.html">Servicios</a>
+        </nav>
+    </header>
+    <section class="servicios-container">
+        <h1>Servicios</h1>
+        <div>
+            <h3>Adobe Softwares:</h3>
+            <ul>
+                <li>Illustrator</li>
+                <li>After Effects</li>
+                <li>Animate</li>
+                <li>Premiere Pro</li>
+                <li>Photoshop</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Art Softwares:</h3>
+            <ul>
+                <li>Clip Studio Paint</li>
+                <li>Krita</li>
+            </ul>
+        </div>
+        <div>
+            <h3>3D Softwares:</h3>
+            <ul>
+                <li>Blender</li>
+                <li>Cinema 4D</li>
+            </ul>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024</p>
+        <a href="mailto:mirandapm@gmail.com">Contáctame aquí</a>
+    </footer>
+</body>
+</html>

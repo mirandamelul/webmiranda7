@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #bfeeb6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
+        }
+
+        a:hover {
+            color: inherit;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 1rem;
+        }
+
+        main {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        main h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        main p {
+            font-size: 1.2rem;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .post {
+            width: 400px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .post img {
+            display: block;
+            margin: 0 auto 20px;
+            border-radius: 8px;
+        }
+
+        .post h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .post p {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+    </style>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('.menu').classList.toggle('active');
+        });
+    });
+    </script>
+</head>
+<body>
+    <header class="menu">
+        <div>
+            <img src="../img/logo.png" width="100" alt="Foto logo"> 
+        </div>
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav class="menu-items">
+            <a href="../index.html">Inicio</a>
+            <a href="../portfolio/index.html">Mi Portfolio</a>
+            <a href="../contacto/index.html">Contacto</a>
+            <a href="../sobremi/index.html">Sobre Mí</a>
+            <a href="../servicios/index.html">Servicios</a>
+        </nav>
+    </header>
+    <section class="container">
+        <article class="post" onclick="window.location.href='../seccion1/index.html';">
+            <h2>Ilustraciones</h2>
+            <p>Clip Studio, Photoshop</p>
+            <img src="../img/ilustracion.jpeg" width="400" alt="Ilustraciones">
+            <p>Dibujos a mano y en digital</p>
+        </article>
+        <article class="post" onclick="window.location.href='../seccion3/index.html';">
+            <h2>Edición de video</h2>
+            <p>After effects, Premiere</p>
+            <img src="../img/video.jpg" width="400" alt="Edición de video">
+            <img src="../img/demoreel.png" width="400" alt="Edición de video">
+            <p>Ediciones audiovisuales</p>
+        </article>
+    </section>
+    <footer>
+        <p>&copy; 2024</p>
+        <a href="mailto:mirandapm@gmail.com">Contáctame aquí</a>
+    </footer>
+</body>
+</html>

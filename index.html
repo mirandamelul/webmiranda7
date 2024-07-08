@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
+        }
+        a:hover {
+            color: inherit;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 1rem;
+        }
+        main {
+            text-align: center;
+            padding: 2rem;
+        }
+        main h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-align: flex;
+        }
+        main p {
+            font-size: 1.2rem;
+        }
+        .presentation {
+            margin-top: 2rem;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .presentation-content {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+        .presentation img {
+            width: 200px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+        .presentation h2 {
+            font-size: 2rem;
+            margin-top: 0;
+        }
+        .presentation p {
+            font-size: 1.2rem;
+            margin: 0.5rem 0;
+        }
+        .presentation .long-paragraph {
+            margin-top: 1rem;
+            font-size: 1.2rem;
+            text-align: justify;
+            max-width: 600px;
+        }
+        @media(min-width: 768px) {
+            .presentation-content {
+                flex-direction: row;
+                text-align: left;
+            }
+            .presentation img {
+                margin-right: 20px;
+                margin-bottom: 0;
+            }
+        }
+    </style>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('.menu').classList.toggle('active');
+        });
+    });
+    </script>
+</head>
+<body>
+    <header class="menu">
+        <div>
+            <img src="img/logo.png" width="100" alt="Foto logo"> 
+        </div> 
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav class="menu-items">
+            <a href="../webmiranda/index.html">Inicio</a>
+            <a href="../webmiranda/portfolio/index.html">Mi Portfolio</a>
+            <a href="../webmiranda/contacto/index.html">Contacto</a>
+            <a href="../webmiranda/sobremi/index.html">Sobre Mí</a>
+            <a href="../webmiranda/servicios/index.html">Servicios</a>
+        </nav>
+    </header>
+    <main>
+        <section id="intro" class="fade-in">
+            <h1>Bienvenidos a mi sitio web</h1>
+            <div class="presentation">
+                <div class="presentation-content">
+                    <img src="img/yo.jpeg" alt="Foto de Miranda Melul" style="width: 150px;">
+                    <div class="text">
+                        <p class="long-paragraph">
+                            Hola, soy Miranda Melul, diseñadora y animadora digital de la Universidad de Belgrano. 
+                            Como diseñadora gráfica y multimedial, mi enfoque se centra en crear experiencias visuales impactantes y 
+                            efectivas. Mi pasión por el diseño se refleja en mi trabajo, donde combino habilidades técnicas con 
+                            creatividad para producir resultados atractivos en distintos rubros como motion graphics, ilustraciones, diseño web, 
+                            y animación tradicional. Con experiencia en una variedad de herramientas y softwares de diseño, estoy preparada para
+                            abordar cualquier proyecto creativo. ¡Espero tu propuesta!
+                            <br><br>
+                            Visita la sección <a href="portfolio/index.html">Mi Portfolio</a> para ver mis proyectos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024</p>
+        <a href="mailto:mirandapm@gmail.com">Contáctame aquí</a>
+    </footer>
+    <script src="../WebMiranda/script_js/load-components.js"></script>
+</body>
+</html>
