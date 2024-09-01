@@ -72,7 +72,7 @@
         }
     </style>
     <script>
-        function validateForm() {
+        function validateForm(event) {
             const nombre = document.getElementById('nombre').value.trim();
             const apellido = document.getElementById('apellido').value.trim();
             const email = document.getElementById('email').value.trim();
@@ -80,12 +80,14 @@
             
             if (!nombre || !apellido || !email || !mensaje) {
                 alert('Todos los campos son obligatorios.');
+                event.preventDefault();
                 return false;
             }
 
             const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
             if (!emailPattern.test(email)) {
                 alert('Por favor, ingrese un correo electrónico válido.');
+                event.preventDefault();
                 return false;
             }
 
@@ -122,7 +124,8 @@
     </main>
     <div class="container">
         <div class="form-box">
-           <form id="contactForm" action="enviar_mensaje.php" method="POST">
+            <form id="contactForm" action="https://formspree.io/f/manwkwbo" method="POST" onsubmit="return validateForm(event)">
+                <input type="hidden" name="_next" value="https://mirandamelul.github.io/thank-you.html">
                 <div class="form-group">
                     <label for="nombre">Nombre:</label>
                     <input type="text" id="nombre" name="nombre" required>
