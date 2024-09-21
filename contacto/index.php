@@ -114,7 +114,7 @@
         <nav class="menu-items">
             <a href="../index.html">Inicio</a>
             <a href="../portfolio/index.html">Mi Portfolio</a>
-            <a href="../contacto/index.html">Contacto</a>
+            <a href="../contacto/index.php">Contacto</a>
             <a href="../sobremi/index.html">Sobre Mí</a>
             <a href="../servicios/index.html">Servicios</a>
         </nav>
@@ -123,27 +123,27 @@
         <h1>Contacto</h1>
     </main>
     <div class="container">
-        <div class="form-box">
-            <form id="contactForm" action="https://formspree.io/f/xpwanaln" method="POST" onsubmit="return validateForm(event)">
-                <input type="hidden" name="_next" value="https://mirandamelul.github.io/thank-you.html">
-                <div class="form-group">
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" required>
-                </div>
-                <div class="form-group">
-                    <label for="apellido">Apellido:</label>
-                    <input type="text" id="apellido" name="apellido" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Correo electrónico:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="mensaje">Mensaje:</label>
-                    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-                </div>
-                <button type="submit">Enviar mensaje</button>
-            </form>
+            <div class="form-box">
+                <form id="contactForm" action="enviar_mensaje.php" method="POST" onsubmit="return validateForm(event)">
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="apellido">Apellido:</label>
+                        <input type="text" id="apellido" name="apellido" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo electrónico:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                    </div>
+                    <button type="submit">Enviar mensaje</button>
+                </form>
+            </div>
         </div>
     </div>
     <footer>
