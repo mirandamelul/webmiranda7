@@ -1,145 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Montserrat', sans-serif;
-            background-color: #f9f9f9;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-        a {
-            text-decoration: none;
-            color: inherit;
-            cursor: pointer;
-        }
-        a:hover {
-            color: inherit;
-        }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin-right: 1rem;
-        }
-        main {
-            text-align: center;
-            padding: 2rem;
-        }
-        main h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            text-align: flex;
-        }
-        main p {
-            font-size: 1.2rem;
-        }
-        .presentation {
-            margin-top: 2rem;
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        .presentation-content {
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            text-align: center;
-        }
-        .presentation img {
-            width: 200px;
-            border-radius: 50%;
-            margin-bottom: 20px;
-        }
-        .presentation h2 {
-            font-size: 2rem;
-            margin-top: 0;
-        }
-        .presentation p {
-            font-size: 1.2rem;
-            margin: 0.5rem 0;
-        }
-        .presentation .long-paragraph {
-            margin-top: 1rem;
-            font-size: 1.2rem;
-            text-align: justify;
-            max-width: 600px;
-        }
-        @media(min-width: 768px) {
-            .presentation-content {
-                flex-direction: row;
-                text-align: left;
-            }
-            .presentation img {
-                margin-right: 20px;
-                margin-bottom: 0;
-            }
-        }
-    </style>
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        document.querySelector('.hamburger').addEventListener('click', function() {
-            document.querySelector('.menu').classList.toggle('active');
-        });
-    });
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form | Miranda Melul</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: radial-gradient(circle at 20% 30%, rgba(255, 200, 200, 0.6), transparent 40%), 
+                  radial-gradient(circle at 80% 70%, rgba(200, 255, 200, 0.6), transparent 40%),
+                  conic-gradient(from 45deg, rgba(255, 255, 200, 0.6), transparent 70%), 
+                  linear-gradient(45deg, rgba(200, 200, 255, 0.6), transparent);
+      color: #333;
+    }
+
+    .wrapper {
+      width: 420px;
+      background: transparent;
+      border: 2px solid rgba(255, 255, 255, .2);
+      backdrop-filter: blur(9px);
+      color: #a3859e;
+      border-radius: 12px;
+      padding: 30px 40px;
+    }
+
+    .wrapper h1 {
+      font-size: 36px;
+      text-align: center;
+    }
+
+    .input-box {
+      position: relative;
+      width: 100%;
+      height: 50px;
+      margin: 30px 0;
+    }
+
+    .input-box input {
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      border: none;
+      outline: none;
+      border: 2px solid rgba(255, 255, 255, .2);
+      border-radius: 40px;
+      font-size: 16px;
+      color: #9e7d97;
+      padding: 20px 45px 20px 20px;
+    }
+
+    .input-box input::placeholder {
+      color: #a3859e;;
+    }
+
+    .input-box i {
+      position: absolute;
+      right: 20px;
+      top: 30%;
+      font-size: 20px;
+      color: #faf9fa;;
+    }
+
+    .remember-forgot {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14.5px;
+      margin: -15px 0 15px;
+    }
+
+    .remember-forgot label input {
+      accent-color: #a3859e;;
+      margin-right: 3px;
+    }
+
+    .remember-forgot a {
+      color: #a3859e;;
+      text-decoration: none;
+    }
+
+    .remember-forgot a:hover {
+      text-decoration: underline;
+    }
+
+    .btn {
+      width: 100%;
+      height: 45px;
+      background: #fffeff;;
+      border: none;
+      outline: none;
+      border-radius: 40px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+      cursor: pointer;
+      font-size: 16px;
+      color: #333;
+      font-weight: 600;
+    }
+
+    .register-link {
+      font-size: 14.5px;
+      text-align: center;
+      margin: 20px 0 15px;
+    }
+
+    .register-link p a {
+      color: #a3859e;;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .register-link p a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-    <header class="menu">
-        <div>
-            <img src="img/logo.png" width="100" alt="Foto logo"> 
-        </div> 
-        <div class="hamburger">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-        <nav class="menu-items">
-            <a href="index.html">Inicio</a>
-            <a href="portfolio/index.html">Mi Portfolio</a>
-            <a href="contacto/index.php">Contacto</a>
-            <a href="sobremi/index.html">Sobre Mí</a>
-            <a href="servicios/index.html">Servicios</a>
-        </nav>
-    </header>
-    <main>
-        <section id="intro" class="fade-in">
-            <h1>Bienvenidos a mi sitio web</h1>
-            <div class="presentation">
-                <div class="presentation-content">
-                    <img src="img/yo.jpeg" alt="Foto de Miranda Melul" style="width: 150px;">
-                    <div class="text">
-                        <p class="long-paragraph">
-                            Hola, soy Miranda Melul, diseñadora y animadora digital de la Universidad de Belgrano. 
-                            Como diseñadora gráfica y multimedial, mi enfoque se centra en crear experiencias visuales impactantes y 
-                            efectivas. Mi pasión por el diseño se refleja en mi trabajo, donde combino habilidades técnicas con 
-                            creatividad para producir resultados atractivos en distintos rubros como motion graphics, ilustraciones, diseño web, 
-                            y animación tradicional. Con experiencia en una variedad de herramientas y softwares de diseño, estoy preparada para
-                            abordar cualquier proyecto creativo. ¡Espero tu propuesta!
-                            <br><br>
-                            Visita la sección <a href="portfolio/index.html">Mi Portfolio</a> para ver mis proyectos.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024</p>
-        <a href="mailto:mirandapm@gmail.com">Contáctame aquí</a>
-    </footer>
-    <script src="../WebMiranda/script_js/load-components.js"></script>
+  <div class="wrapper">
+    <h1>Login</h1>
+    <div class="input-box">
+      <input type="email" class="form-control" placeholder="Type your username" id="username">
+      <i class="fas fa-user"></i>
+    </div>
+    <div class="input-box">
+      <input type="password" class="form-control" placeholder="Type your password" id="password">
+      <i class="fas fa-lock"></i>
+    </div>
+    <div class="remember-forgot">
+      <label><input type="checkbox"> Remember me</label>
+      <a href="#">Forgot password?</a>
+    </div>
+    <button class="btn" onclick="func()">LOGIN</button>
+    <div class="register-link">
+      <p>Not a member? <a href="#">Sign-up</a></p>
+    </div>
+  </div>
+
+  <script>
+    function func() {
+      var email = document.getElementById("username").value;
+      var pass = document.getElementById("password").value;
+      if (email == 'emailprueba@gmail.com' && pass == '123456') {
+        alert("Login successful!");
+        window.location.assign("home/index.html");
+      } else {
+        alert("Invalid login.");
+      }
+    }
+  </script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -1,0 +1,17 @@
+Carpeta:
+Se creo un login validado con php
+El index de la pagina principal ahora se encuentra dentro de la carpeta 'home' y la pagina de inicio ahora es el login
+Bootstrap:
+-Estilizacion de la pagina de inicio
+-Agregado de boton en la pagina de inicio
+-Se agregó carrusel en la pagina de inicio
+-Se ajustó el tamaño de las imágenes dentro del carrusel para que se visualicen más pequeñas y se añadió un estilo de max-width: 80% para centrar las imágenes.
+-Se agregó un estilo de box-shadow al carrusel para darle un efecto de profundidad.
+-Se implementó border-radius para suavizar las esquinas del carrusel.
+-Se añadió una transición de opacidad para que las imágenes aparezcan suavemente al cambiar.
+-Se mejoró la experiencia visual del carrusel y su integración con el diseño general de la página
+Php:
+-Se cambió la carpeta de contacto de index.html a index.php y todos los href que esto implica
+-Validacion de formularios en phpmyadmin
+-Se creo una tabla en phpmyadmin para validar el formulario de contacto
+-Se creo una tabla en phpmyadmin para validar el formulario de login
